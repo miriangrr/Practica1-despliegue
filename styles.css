@@ -1,0 +1,199 @@
+:root {
+    --primary: #d97706;
+    --primary-dark: #b45309;
+    --bg-light: #fef3c7;
+    --bg-body: #fffbeb;
+    --text-main: #27272a;
+    --text-muted: #52525b;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Imagen Optimizada */
+.image-section {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-caption {
+    margin-top: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* --- MAGIA INTERACTIVA SÓLO CSS --- */
+
+/* Ocultar los inputs radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Botones / Pestañas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    background: var(--white);
+    border: 2px solid var(--primary);
+    color: var(--primary-dark);
+    padding: 0.6rem 1.4rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background: var(--bg-light);
+}
+
+/* Cambiar estilo del botón activo según el radio seleccionado */
+#tab-jamon:checked ~ .tabs .btn-jamon,
+#tab-pollo:checked ~ .tabs .btn-pollo {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Ocultar contenidos por defecto */
+.content {
+    display: none;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 1.5rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mostrar contenido correspondiente según el radio marcado */
+#tab-jamon:checked ~ .content-jamon {
+    display: grid;
+}
+
+#tab-pollo:checked ~ .content-pollo {
+    display: grid;
+}
+
+/* Cajas de la Receta */
+.ingredients-box {
+    background-color: var(--bg-body);
+    padding: 1.2rem;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+}
+
+.ingredients-box h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.ingredients-box ul {
+    list-style: none;
+}
+
+.ingredients-box li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #fcd34d;
+}
+
+/* Checklist Interactivo de Pasos */
+.steps-box h3 {
+    color: var(--primary-dark);
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.checklist {
+    list-style: none;
+}
+
+.checklist li label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checklist li label:hover {
+    background: var(--bg-light);
+}
+
+.checklist input[type="checkbox"] {
+    margin-top: 0.3rem;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+/* Tachar paso cuando el checkbox esté marcado en CSS */
+.checklist input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--primary-dark);
+    color: var(--white);
+    font-size: 0.9rem;
+}
