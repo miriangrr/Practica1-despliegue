@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croquetas Caseras | Pure HTML & CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
@@ -14,18 +16,36 @@
     </header>
 
     <main class="container">
+        <!-- Tarjeta Interactiva de Fritura (Solo HTML y CSS) -->
+        <section class="timer-card">
+            <h3>⏱️ Guía Rápida de Fritura</h3>
+            <p>Haz clic para desplegar los tiempos exactos y evitar que se abran:</p>
+
+            <details class="timer-details">
+                <summary>Ver tiempos y temperatura ideal</summary>
+                <div class="timer-content">
+                    <ul>
+                        <li><strong>Temperatura del aceite:</strong> 180°C (muy caliente).</li>
+                        <li><strong>Tiempo en el aceite:</strong> 2 minutos exactos.</li>
+                        <li><strong>Consejo pro:</strong> No eches muchas croquetas a la vez para que la temperatura del
+                            aceite no baje, mantén la temperatura constante.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
 
         <!-- Imagen Destacada -->
         <section class="image-section">
             <div class="image-container">
-                <img src="croquetas.jpg" alt="Plato con croquetas caseras doradas sobre un mantel de cuadros rojos y blancos">
+                <img src="croquetas-de-jamon-1024x683.jpg"
+                    alt="Plato con croquetas caseras doradas sobre un mantel de cuadros rojos y blancos">
             </div>
             <p class="image-caption">Croquetas tradicionales recién fritas.</p>
         </section>
 
         <!-- CONTENEDOR INTERACTIVO CON RADIO BUTTONS -->
         <div class="interactive-recipe">
-            
+
             <!-- Radios ocultos para controlar la pestaña activa -->
             <input type="radio" id="tab-jamon" name="receta" checked>
             <input type="radio" id="tab-pollo" name="receta">
@@ -53,14 +73,20 @@
                     <h3>Paso a Paso</h3>
                     <p class="hint">Haz clic en las casillas para marcar los pasos hechos:</p>
                     <ul class="checklist">
-                        <li><label><input type="checkbox"> <span><strong>Pochar cebolla:</strong> Sofríe la cebolla con la mantequilla.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Jamón y Harina:</strong> Añade el jamón picado y la harina. Rehoga 2 min.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Bechamel:</strong> Añade la leche poco a poco removiendo con varillas.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Enfriar:</strong> Deja reposar la masa tapada 4 horas en la nevera.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Empanar y freír:</strong> Forma las croquetas, pásalas por huevo, pan rallado y fríe.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Pochar cebolla:</strong> Sofríe la cebolla con
+                                    la mantequilla.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Jamón y Harina:</strong> Añade el jamón picado
+                                    y la harina. Rehoga 2 min.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Bechamel:</strong> Añade la leche poco a poco
+                                    removiendo con varillas.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Enfriar:</strong> Deja reposar la masa tapada 4
+                                    horas en la nevera.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Empanar y freír:</strong> Forma las croquetas,
+                                    pásalas por huevo, pan rallado y fríe.</span></label></li>
                     </ul>
                 </div>
             </div>
+        
 
             <!-- Bloque de Ingredientes de Pollo -->
             <div class="content content-pollo">
@@ -79,11 +105,16 @@
                     <h3>Paso a Paso</h3>
                     <p class="hint">Haz clic en las casillas para marcar los pasos hechos:</p>
                     <ul class="checklist">
-                        <li><label><input type="checkbox"> <span><strong>Desmenuzar pollo:</strong> Pica fino el pollo cocido o asado.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Sofrito:</strong> Pocha la cebolla en mantequilla e incorpora el pollo.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Roux y Bechamel:</strong> Añade harina y liga la mezcla vertiendo la leche.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Reposo:</strong> Guarda en frío hasta que la masa quede firme.</span></label></li>
-                        <li><label><input type="checkbox"> <span><strong>Fritura:</strong> Bolea, pasa por huevo y pan rallado, y fríe a 180°C.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Desmenuzar pollo:</strong> Pica fino el pollo
+                                    cocido o asado.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Sofrito:</strong> Pocha la cebolla en
+                                    mantequilla e incorpora el pollo.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Roux y Bechamel:</strong> Añade harina y liga
+                                    la mezcla vertiendo la leche.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Reposo:</strong> Guarda en frío hasta que la
+                                    masa quede firme.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Fritura:</strong> Bolea, pasa por huevo y pan
+                                    rallado, y fríe a 180°C.</span></label></li>
                     </ul>
                 </div>
             </div>
@@ -97,4 +128,5 @@
     </footer>
 
 </body>
+
 </html>
