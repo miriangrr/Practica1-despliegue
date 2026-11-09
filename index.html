@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croquetas Caseras | Pure HTML & CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Recetas de Croquetas Caseras</h1>
+        <p>Cremosas por dentro, crujientes por fuera</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Imagen Destacada -->
+        <section class="image-section">
+            <div class="image-container">
+                <img src="croquetas.jpg" alt="Plato con croquetas caseras doradas sobre un mantel de cuadros rojos y blancos">
+            </div>
+            <p class="image-caption">Croquetas tradicionales recién fritas.</p>
+        </section>
+
+        <!-- CONTENEDOR INTERACTIVO CON RADIO BUTTONS -->
+        <div class="interactive-recipe">
+            
+            <!-- Radios ocultos para controlar la pestaña activa -->
+            <input type="radio" id="tab-jamon" name="receta" checked>
+            <input type="radio" id="tab-pollo" name="receta">
+
+            <!-- Botones Pestaña (Labels) -->
+            <div class="tabs">
+                <label for="tab-jamon" class="tab-btn btn-jamon">🥓 Jamón Ibérico</label>
+                <label for="tab-pollo" class="tab-btn btn-pollo">🍗 Pollo Casero</label>
+            </div>
+
+            <!-- Bloque de Ingredientes de Jamón -->
+            <div class="content content-jamon">
+                <div class="ingredients-box">
+                    <h3>Ingredientes (Jamón Ibérico)</h3>
+                    <ul>
+                        <li><strong>100g</strong> de Jamón Ibérico picado</li>
+                        <li><strong>500ml</strong> de Leche entera</li>
+                        <li><strong>45g</strong> de Mantequilla</li>
+                        <li><strong>45g</strong> de Harina de trigo</li>
+                        <li><strong>1/2</strong> Cebolla picada fina</li>
+                        <li>Huevo batido y pan rallado</li>
+                    </ul>
+                </div>
+                <div class="steps-box">
+                    <h3>Paso a Paso</h3>
+                    <p class="hint">Haz clic en las casillas para marcar los pasos hechos:</p>
+                    <ul class="checklist">
+                        <li><label><input type="checkbox"> <span><strong>Pochar cebolla:</strong> Sofríe la cebolla con la mantequilla.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Jamón y Harina:</strong> Añade el jamón picado y la harina. Rehoga 2 min.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Bechamel:</strong> Añade la leche poco a poco removiendo con varillas.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Enfriar:</strong> Deja reposar la masa tapada 4 horas en la nevera.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Empanar y freír:</strong> Forma las croquetas, pásalas por huevo, pan rallado y fríe.</span></label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bloque de Ingredientes de Pollo -->
+            <div class="content content-pollo">
+                <div class="ingredients-box">
+                    <h3>Ingredientes (Pollo Casero)</h3>
+                    <ul>
+                        <li><strong>120g</strong> de Pollo deshilachado</li>
+                        <li><strong>500ml</strong> de Leche entera</li>
+                        <li><strong>45g</strong> de Mantequilla</li>
+                        <li><strong>45g</strong> de Harina de trigo</li>
+                        <li><strong>1/2</strong> Cebolla picada fina</li>
+                        <li>Huevo batido y pan rallado</li>
+                    </ul>
+                </div>
+                <div class="steps-box">
+                    <h3>Paso a Paso</h3>
+                    <p class="hint">Haz clic en las casillas para marcar los pasos hechos:</p>
+                    <ul class="checklist">
+                        <li><label><input type="checkbox"> <span><strong>Desmenuzar pollo:</strong> Pica fino el pollo cocido o asado.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Sofrito:</strong> Pocha la cebolla en mantequilla e incorpora el pollo.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Roux y Bechamel:</strong> Añade harina y liga la mezcla vertiendo la leche.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Reposo:</strong> Guarda en frío hasta que la masa quede firme.</span></label></li>
+                        <li><label><input type="checkbox"> <span><strong>Fritura:</strong> Bolea, pasa por huevo y pan rallado, y fríe a 180°C.</span></label></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 El Secreto de las Croquetas Caseras</p>
+    </footer>
+
+</body>
+</html>
